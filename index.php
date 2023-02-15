@@ -15,7 +15,7 @@
                         <p>Magni deserunt dolorem consectetur adipisicing elit. Corporis molestiae optio, laudantium
                             odio quod rerum
                             maiores, omnis unde quae illo.</p>
-                        <a href="products.html" class="filled-button">Products</a>
+                        <a href="products.php" class="filled-button">Products</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa cupiditate mollitia
                             adipisci assumenda
                             laborum eius quae quo excepturi, eveniet. Dicta nulla ea beatae consequuntur?</p>
-                        <a href="about.html" class="filled-button">About Us</a>
+                        <a href="about.php" class="filled-button">About Us</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                         <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus
                             lacinia ac
                             sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
-                        <a href="contact.html" class="filled-button">Contact Us</a>
+                        <a href="contact.php" class="filled-button">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
                 </div>
                 <div class="col-md-4">
-                    <a href="contact.html" class="border-button">Contact Us</a>
+                    <a href="contact.php" class="border-button">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                             <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris
                                 sit amet
                                 eleifend.</p>
-                            <a href="product-details.html" class="filled-button">View More</a>
+                            <a href="product-details.php" class="filled-button">View More</a>
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@
                             <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris
                                 sit amet
                                 eleifend.</p>
-                            <a href="product-details.html" class="filled-button">View More</a>
+                            <a href="product-details.php" class="filled-button">View More</a>
                         </div>
                     </div>
 
@@ -123,7 +123,7 @@
                             <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris
                                 sit amet
                                 eleifend.</p>
-                            <a href="product-details.html" class="filled-button">View More</a>
+                            <a href="product-details.php" class="filled-button">View More</a>
                         </div>
                     </div>
 
@@ -149,7 +149,7 @@
                             <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla conse quat
                                 tellus nibh, id
                                 molestie felis sagittis ut. Nam ullamcorper tempus ipsum in cursus</p>
-                            <a href="about.html" class="filled-button">Read More</a>
+                            <a href="about.php" class="filled-button">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <br>
 
                     <div class="text-center">
-                        <a href="blog.html" class="filled-button">Read More</a>
+                        <a href="blog.php" class="filled-button">Read More</a>
                     </div>
 
                     <br>
@@ -191,7 +191,7 @@
                     <section class='tabs-content'>
                         <article id='tabs-1'>
                             <img src="assets/images/blog-image-1-940x460.jpg" alt="">
-                            <h4><a href="blog-details.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                            <h4><a href="blog-details.php">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
                             </h4>
                             <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in,
                                 tincidunt vel
@@ -201,7 +201,7 @@
                         </article>
                         <article id='tabs-2'>
                             <img src="assets/images/blog-image-2-940x460.jpg" alt="">
-                            <h4><a href="blog-details.html">Mauris lobortis quam id dictum dignissim</a></h4>
+                            <h4><a href="blog-details.php">Mauris lobortis quam id dictum dignissim</a></h4>
                             <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in,
                                 tincidunt vel
                                 diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis
@@ -210,7 +210,7 @@
                         </article>
                         <article id='tabs-3'>
                             <img src="assets/images/blog-image-3-940x460.jpg" alt="">
-                            <h4><a href="blog-details.html">Class aptent taciti sociosqu ad litora torquent per</a></h4>
+                            <h4><a href="blog-details.php">Class aptent taciti sociosqu ad litora torquent per</a></h4>
                             <p>Mauris lobortis quam id dictum dignissim. Donec pellentesque erat dolor, cursus dapibus
                                 turpis
                                 hendrerit quis. Suspendisse at suscipit arcu. Nulla sed erat lectus. Nulla facilisi. In
