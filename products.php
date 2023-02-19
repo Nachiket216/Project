@@ -1,4 +1,4 @@
-<?php include 'components/head.php'?>
+<?php $page ='products'; include 'components/head.php'?>
 
   <body>
   <?php include 'components/navbar.php';?>
@@ -30,7 +30,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis asperiores eveniet iure impedit soluta aliquid. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -49,7 +49,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, impedit itaque delectus laboriosam quas veniam. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -68,7 +68,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eius at unde natus, sit possimus. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -87,7 +87,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptatibus cupiditate repudiandae hic odio quas. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -106,7 +106,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat in a repellendus nobis! Iure, eveniet! </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 
@@ -125,7 +125,7 @@
                 </div>
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quis quam porro. Sint, in, at. </p>
-                <a href="product-details.html" class="filled-button">View More</a>
+                <a href="product-details.php" class="filled-button">View More</a>
               </div>
             </div>
 

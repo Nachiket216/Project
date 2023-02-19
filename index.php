@@ -1,4 +1,4 @@
-<?php include 'components/head.php'?>
+<?php $page ='home'; include 'components/head.php'?>
 
 <body>
     <?php include 'components/navbar.php';?>
