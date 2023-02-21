@@ -1,4 +1,4 @@
-<?php $page ='products'; include '../components/head.php'?>
+<?php $page ='brands'; include '../components/head.php'?>
 
   <body>
   <?php include '../components/navbar.php';?>

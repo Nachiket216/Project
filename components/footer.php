@@ -24,11 +24,11 @@
                 <div class="col-md-3 footer-item">
                     <h4>Additional Pages</h4>
                     <ul class="menu-list">
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Terms</a></li>
+                        <li><a href="/myprojects/mobile/products.php">Products</a></li>
+                        <li><a href="/myprojects/mobile/about.php">About Us</a></li>
+                        <li><a href="/myprojects/mobile/blog.php">Blog</a></li>
+                        <li><a href="/myprojects/mobile/contact.php">Contact Us</a></li>
+                        <li><a href="/myprojects/mobile/terms.php">Terms</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 footer-item last-item">

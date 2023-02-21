@@ -24,13 +24,13 @@
 
 
 <body>
-    <?php $page ='login';include 'components/navbar.php' ?>
+    <?php $page ='signup';include 'components/navbar.php' ?>
     <div class="page-heading header-text">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Login</h1>
-            <span>Login in to buy any product from our website</span>
+            <h1>Sign Up</h1>
+            <span>Sign up to buy any product from our website</span>
           </div>
         </div>
       </div>
