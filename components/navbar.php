@@ -54,13 +54,14 @@
                     </li>
                     <li class="nav-item dropdown <?php if($page=='about'){echo 'active';} ?>">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">About</a>
+                            aria-haspopup="true" aria-expanded="false">Brands</a>
 
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="about.php">About Us</a>
-                            <a class="dropdown-item" href="blog.php">Blog</a>
-                            <a class="dropdown-item" href="testimonials.php">Testimonials</a>
-                            <a class="dropdown-item" href="terms.php">Terms</a>
+                            <a class="dropdown-item" href="brands/apple.php">Apple</a>
+                            <a class="dropdown-item" href="brands/nokia.php">Nokia</a>
+                            <a class="dropdown-item" href="brands/oneplus.php">One Plus</a>
+                            <a class="dropdown-item" href="brands/oppo.php">Oppo</a>
+                            <a class="dropdown-item" href="brands/samsung.php">Samsung</a>
                         </div>
                     </li>
                     <li class="nav-item <?php if($page=='contact us'){echo 'active';} ?>">
