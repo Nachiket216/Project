@@ -1,3 +1,7 @@
+<?php
+include "admin/db.php"
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +28,9 @@
 
 
 <body>
-    <?php $page ='login';include 'components/navbar.php' ?>
+    <?php $page ='login';
+    include 'components/navbar.php' 
+    ?>
     <div class="page-heading header-text">
       <div class="container">
         <div class="row">
@@ -43,19 +49,44 @@
       <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
     </div>
     <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Sign In</h2>
-      <div class="relative mb-4">
-        <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
-        <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="relative mb-4">
-        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-        <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <button style="background-color: #a4c639;" class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
-      <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
-    </div>
+
+  <div class="pt-4 pb-2">
+    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
+    <p class="text-center small">Enter your username & password to login</p>
   </div>
+
+  <form class="row g-3 needs-validation" action="login.php" method="POST" >
+
+    <div class="col-12">
+      <label for="username" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" name="username" class="form-control" id="username" required>
+        <div class="invalid-feedback">Please enter your username.</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="yourPassword" required>
+      <div class="invalid-feedback">Please enter your password!</div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+        <label class="form-check-label" for="rememberMe">Remember me</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary w-100" type="submit" name="login" value="login">Login</button>
+    </div>
+    <div class="col-12">
+      <p class="small mb-0">Don't have account? <a href="signup.php">Create an account</a></p>
+    </div>
+  </form>
+
+</div>
 </section>
 
 
@@ -91,3 +122,29 @@ function clearField(t) { //declaring the array outside of the
 </body>
 
 </html>
+<?php 
+ 
+
+ if(isset($_POST['login']))
+ {
+  
+  $user_name=$_POST['username'];
+  $user_pass=$_POST['password'];
+  
+
+
+  $sql="SELECT * FROM user WHERE user_name='$user_name' AND c_password='$user_pass'";
+  $result=mysqli_query($con,$sql);
+  if(mysqli_num_rows($result)>0)
+  {
+    echo "<script>window.open('login.php?logged='Logged in successfully .. !','_self')</script>";
+    //header('location:home.php');
+    
+  }
+  else
+  {
+    echo "<script> alert('Password or username is incorrect!')</script>";
+  }
+
+ }
+ ?>

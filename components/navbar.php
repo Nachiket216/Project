@@ -32,7 +32,7 @@
 <header class="">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="../index.php">
                 <h2>Mobile Store<em> Website</em></h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -52,7 +52,7 @@
                     <li class="nav-item <?php if($page=='checkout'){echo 'active';} ?>">
                         <a class="nav-link" href="checkout.php">Checkout</a>
                     </li>
-                    <li class="nav-item dropdown <?php if($page=='about'){echo 'active';} ?>">
+                    <li class="nav-item dropdown <?php if($page=='brands'){echo 'active';} ?>">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Brands</a>
 
@@ -69,6 +69,9 @@
                     </li>
                     <li class="nav-item <?php if($page=='login'){echo 'active';} ?>">
                         <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                    <li class="nav-item <?php if($page=='signup'){echo 'active';} ?>">
+                        <a class="nav-link" href="signup.php">signup</a>
                     </li>
                 </ul>
             </div>
