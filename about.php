@@ -1,7 +1,7 @@
-<?php $page ='about'; include 'components/head.php'?>
+<?php $page ='about'; include '../components/head.php'?>
 
   <body>
-  <?php include 'components/navbar.php';?>
+  <?php include '../components/navbar.php';?>
 
     <!-- Page Content -->
     <div class="page-heading header-text">

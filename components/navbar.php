@@ -76,11 +76,14 @@
                             <a class="dropdown-item" href="/myprojects/mobile/blog.php">Blogs</a>
                         </div>
                     </li>
-                    <li class="nav-item <?php if($page=='signup'){echo 'active';} ?>">
+                    <!-- <li class="nav-item <?php if($page=='signup'){echo 'active';} ?>">
                         <a class="nav-link" href="/myprojects/mobile/signup.php">Sign Up</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item <?php if($page=='login'){echo 'active';} ?>">
                         <a class="nav-link" href="/myprojects/mobile/login.php">Login</a>
+                    </li>
+                    <li class="nav-item <?php if($page=='signup'){echo 'active';} ?>">
+                        <a class="nav-link" href="signup.php">signup</a>
                     </li>
                 </ul>
             </div>
