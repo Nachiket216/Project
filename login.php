@@ -35,8 +35,8 @@ include "admin/db.php"
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Sign In</h1>
-            <span>Sign in to buy any product from our website</span>
+            <h1>Login</h1>
+            <span>Login in to buy any product from our website</span>
           </div>
         </div>
       </div>
@@ -139,12 +139,10 @@ function clearField(t) { //declaring the array outside of the
   {
     echo "<script>window.open('login.php?logged='Logged in successfully .. !','_self')</script>";
     //header('location:home.php');
-    
   }
   else
   {
     echo "<script> alert('Password or username is incorrect!')</script>";
   }
-
  }
  ?>
