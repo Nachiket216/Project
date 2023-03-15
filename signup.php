@@ -68,20 +68,54 @@ include "admin/db.php";
                     </div>
 
                     <div class="col-12" >
-                      <label for="useremail" class="form-label">User Type</label>
-                      <div class="col-sm-6">
-                        <select class="form-control" name="property" id="property">
+                      <label for="user_type" class="form-label">User Type</label>
+                        <select class="form-control" name="user_type" id="user_type">
                           <option value="" selected="selected">Select Property</option>
+                          <option value="admin" >Admin</option>
+                          <option value="user" >User</option>
+                          <option value="seller" >Seller</option>
                         </select>
-                      </div>
+                    </div>
+                    
+                    <!-- Seller fields -->
+                		<div id="seller_fields" style="display:none; width:100%;" >
+
+                      <div class="col-12">
+                        <label for="shop_name" class="form-label">Shop Name</label>
+                        <input type="text" name="shop_name" class="form-control" id="shop_name" required>
+                        <div class="invalid-feedback">Please, enter your name!</div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="seller_name" class="form-label">Seller Name</label>
+                        <input type="text" name="seller_name" class="form-control" id="seller_name" required>
+                        <div class="invalid-feedback">Please, enter your name!</div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="seller_address" class="form-label">Seller Address</label>
+                        <input type="text" name="seller_address" class="form-control" id="seller_address" required>
+                        <div class="invalid-feedback">Please, enter your name!</div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="seller_mobile" class="form-label">Seller Mobile Number</label>
+                        <input type="text" name="seller_mobile" class="form-control" id="seller_mobile" required>
+                        <div class="invalid-feedback">Please, enter your name!</div>
+                      </div>
+
                     </div>
 
+                		<div id="admin_fields" style="display:block; width:100%;" >
+
                       <div class="col-12" >
-                      <label for="useremail" class="form-label">User Type</label>
-                        <select class="form-control" name="" id="chapter"  >
-                         <option value="" selected="selected">Please select user type</option>
+                      <label for="useremail" class="form-label">User Location</label>
+                      
+                        <select class="form-control" name="location" id="location"  >
+                         <option value="location" selected="selected">Please select user type</option>
                       </select>
                       </div>  
+                      </div>
                     
 
                     <div class="col-12">
@@ -117,9 +151,28 @@ include "admin/db.php";
 </section>
 
 
+
+
+
         <!-- Footer Starts Here -->
 <?php include 'components/footer.php'?>
 
+
+<script>
+		// Show seller fields if seller is selected in user type dropdown
+		document.getElementById("user_type").addEventListener("change", function() {
+			if (this.value == "seller") {
+				document.getElementById("seller_fields").style.display = "block";
+			} else {
+				document.getElementById("seller_fields").style.display = "none";
+			}
+			if (this.value == "admin") {
+        document.getElementById("admin_fields").style.display = "none";
+			} else {
+				document.getElementById("admin_fields").style.display = "block";
+			}
+		});
+	</script>
 
 
 <!-- Bootstrap core JavaScript -->
@@ -143,139 +196,7 @@ function clearField(t) { //declaring the array outside of the
 }
 </script>
 
-<!-- <script src="https://cdn.tailwindcss.com"></script> -->
-<script type="text/javascript">
-                          var propertyObject ={            
-                            "COMMERCIAL":{
-                              "Room":["No.of rooms","area of room","Floor No","Water","Electric","Kitchen","Washroom"],
-                              "Shop":["area of room","Water","Electric","Road","Parking","market place"], 
-                              "Office":["area of room","Water","Electric","Road","Parking","market place"],
-                              "Flat":["1 2 3 4 BHK","Total Size in Sq Ft","Floor No","Security","Lift","Water","Solar Heater","Play Ground","Pool"],
-                              "Apartment":["1 2 3 4 BHK","Total Size in Sq Ft","Floor No","Security","Lift","Water","Solar Heater","Play Ground","Pool"],
-                              "Hall":["No.of rooms","area of room","Water","Electric","Parking"],
-                              "Bank":["No.of rooms","area of room","Water","Electric","Parking"],
-                              "Restaurant":["No.of rooms","area of room","Water","Electric","Parking"],
-                               "Bar":["No.of rooms","area of room","Water","Electric","Parking"],
-                                "Hospital":["No.of rooms","area of room","Water","Electric","Parking"],
-                                "Resort":["No. of rooms","area of room","Water","Electric","Parking"], 
-                                "Lay out":["Total Size in Sq Ft","Road","Fencing","Sewerage","Guderline","Water","Electric","NA","NATP","NMRDA","RERA"],
-                                "open plot":["Total Size in Sq Ft","Road","Fencing","Sewerage","Guderline","Water","Electric","NA","NATP","NMRDA", "RERA"],
-                                "Coaching class":["No.of rooms","area of room","Water","Electric","Parking"],
-                                "Café":["No.of rooms","area of room","Water","Electric","Parking"],
-                                "Agriculture":["area in acers","well","Bore","Irrigation","Electric","Road","Fencing"],
-                               
-                               
-                                        },
-                              "RESIDENTIAL":{
-                                "Room":["No.of rooms","area of room","Floor No","Water","Electric","Kitchen","Washroom"],
-                                "House":["No.of rooms","area of room","Floor No","Water","Electric","Kitchen","Washroom"],
-                                "Row house":["1 2 3 4 BHK","Total Size in Sq Ft","Fencing","Kitchen","Washroom","Security","Swimming Pool"],
-                                "Flat":["1 2 3 4 BHK","Total Size in Sq Ft","Floor No","Security","Lift","Water","Solar Heater","Play Ground","Pool"],
-                                "Apartment":["1 2 3 4 BHK","Total Size in Sq Ft","Floor No","Security","Lift","Water","Solar Heater","Play Ground","Pool"],
-                                "Bungalow":["1 2 3 4 BHK","Total Size in Sq Ft","Floor No","Security","Lift","Water","Solar Heater","Play Ground","Pool"],
-                                "Residential open plot":["Total Size in Sq Ft","Road","Fencing","Sewerage","Guderline","Water","Electric","NA","NATP","NMRDA","RERA"],
-                                "Lay out":["Total Size in Sq Ft","Road","Fencing","Sewerage","Guderline","Water","Electric","NA","NATP","NMRDA", "RERA"]
-                                              }
-                                            }
-                                      window.onload = function()
-                                       {
-                                        var propertySel = document.getElementById("property");
-                                        var topicSel = document.getElementById("topic");
-                                         var chapterSel = document.getElementById("chapter");
-                                         var toggleswitch = document.getElementById("switch1");
-                                         //setting  property  
-                                        for (var x in propertyObject) {
-                                              propertySel.options[propertySel.options.length] = new Option(x, x);
-                                            }
-
-                                   //setting property type     
-                                  propertySel.onchange = function()
-                                   {
-                                    
-                                  
-                                    topicSel.length = 1;
-                                    //display correct values
-                                    for (var y in propertyObject[this.value])
-                                     {
-                                      topicSel.options[topicSel.options.length] = new Option(y, y);
-                                    }
-                                     
-                                  }
-                                  //setting aminities
-                                  topicSel.onchange = function()
-                                   {
-                                      
-                                      chapterSel.length = 1;
-                                   
-                                      $('#inputarea').empty();
-                                       $('#checkarea').empty();
-
-                                      //display correct values
-                                      var z = propertyObject[propertySel.value][this.value];
-                                      for (var i = 0; i < z.length; i++) {
-                                        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
-                                      }
-                                       //display aminities in text area
-                                      
-                                      var option=$(this).val();
-                                      if(option=="Room" || option=="House" ){
-                                        
-                                          for (var i = 0; i < 3; i++)
-                                          {
-                                            $("#inputarea").append('<div id="content" class=" form-check-inline col-sm-4"  ><input type="text" placeholder="'+z[i]+'" class="form-control " name="inputs1[]"/ ></div>');
-                                          }
-                                          for (var i = 3; i < z.length; i++)
-                                          {
-                                            $("#checkarea").append('<div id="content" class=" form-check-inline col-sm-2" id="checkarea" ><p>'+z[i]+'<input type="checkbox" value="'+z[i]+'" class="checkcheck" name="inputs2[]"/ ></p></div>');
-                                          }
-
-                                      }
-                                      else (option=="Hospital" || option== "Hall" || option=="Bank" ||
-                                    option=="Restaurant" || option== "Bar" || option=="Resort" ||
-                                    option=="Coaching class" || option== "Café" );{
-                                      
-                                          for (var i = 0; i < 2; i++)
-                                          {
-                                            $("#inputarea").append('<div id="content" class=" form-check-inline col-sm-4"  ><input type="text" placeholder="'+z[i]+'" class="form-control " name="inputs1[]"/ ></div>');
-                                          }
-                                          for (var i = 2; i < z.length; i++)
-                                          {
-                                            $("#checkarea").append('<div id="content" class=" form-check-inline col-sm-2" id="checkarea" ><p>'+z[i]+'<input type="checkbox" value="'+z[i]+'" class="checkcheck" name="inputs2[]"/ ></p></div>');
-                                          }
-                                      }
-                                  toggleswitch.onchange = function()
-                                     {
-                                       
-                              var search_array1 = $('input[name="inputs1[]"]').map(function(){return $(this).val();}).get();
-                                              
-                              
-                              //$('input[name="inputs2[]"]').map(function(){return $(this).val();}).get();
-                                          var checkedValue=" "; 
-                                              var inputElements = document.getElementsByClassName('checkcheck');
-                                              for(var i=0; inputElements[i]; ++i){
-                                                    if(inputElements[i].checked){
-                                                         checkedValue = checkedValue+","+inputElements[i].value;
-                                                        
-                                                    }
-                                              }
-                                              
-
-                                              let text2  = checkedValue;
-                                              let text1 = search_array1.toString();
-                                              // search_array2.toString();
-
-                                              $("#hide1").append('<div id="content" class=" form-check-inline col-xs-4"  ><input type="text" placeholder="" class="form-control " value="'+text1+'" name="inputs1"/ ></div>');
-                                              $("#hide1").append('<div id="content" class=" form-check-inline col-xs-4"  ><input type="text" placeholder="" class="form-control " value="'+text2+'" name="inputs2"/ ></div>');
-                                          
-                                             
-                                              
-                                            
-                                    }
-                               
-                                    }
-                                  }
-                    
-</script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 </body>
 
