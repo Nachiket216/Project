@@ -15,6 +15,64 @@
       </div>
     </div>
 
+    <div class="callback-form contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Search a <em>Product</em></h2>
+              <span>Suspendisse a ante in neque iaculis lacinia</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form id="contact" action="" method="get">
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                      <!-- <label for="user_type" class="form-label">User Type</label> -->
+                        <select class="form-control" name="user_type" id="user_type">
+                          <option value="" selected="selected">Select Location</option>
+                          <option value="Nagpur" >Nagpur</option>
+                          <option value="Mumbai" >Mumbai</option>
+                          <option value="Pune" >Pune</option>
+                        </select>
+
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                      <!-- <label for="user_type" class="form-label">User Type</label> -->
+                        <select class="form-control" name="user_type" id="user_type">
+                          <option value="" selected="selected">Select Product Category</option>
+                          <option value="" >Electrnoics</option>
+                          <option value="" >Men's Fashion</option>
+                          <option value="" >Womens's Fashion</option>
+                        </select>
+
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                      <!-- <label for="user_type" class="form-label">User Type</label> -->
+                        <select class="form-control" name="user_type" id="user_type">
+                          <option value="" selected="selected">Select Product</option>
+                          <option value="" >Nagpur</option>
+                          <option value="" >Mumbai</option>
+                          <option value="" >Pune</option>
+                        </select>
+
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Search</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="services">
       <div class="container">
         <div class="row">

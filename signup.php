@@ -70,7 +70,7 @@ include "admin/db.php";
                     <div class="col-12" >
                       <label for="user_type" class="form-label">User Type</label>
                         <select class="form-control" name="user_type" id="user_type">
-                          <option value="" selected="selected">Select Property</option>
+                          <option value="" selected="selected">Select User Type</option>
                           <option value="admin" >Admin</option>
                           <option value="user" >User</option>
                           <option value="seller" >Seller</option>
@@ -87,7 +87,7 @@ include "admin/db.php";
                       </div>
 
                       <div class="col-12">
-                        <label for="seller_name" class="form-label">Seller Name</label>
+                        <label for="seller_name" class="form-label">Shop Name</label>
                         <input type="text" name="seller_name" class="form-control" id="seller_name" required>
                         <div class="invalid-feedback">Please, enter your name!</div>
                       </div>

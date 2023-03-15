@@ -29,7 +29,6 @@
                         <li><a href="/myprojects/mobile/blog.php">Blog</a></li>
                         <li><a href="/myprojects/mobile/contact.php">Contact Us</a></li>
                         <li><a href="/myprojects/mobile/terms.php">Terms</a></li>
-                        <li><a href="/myprojects/mobile/get-city-by-state-by-country/index.php">INDEX</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 footer-item last-item">
