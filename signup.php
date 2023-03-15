@@ -43,11 +43,11 @@ include "admin/db.php";
     
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+    <div class="lg:w-2/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
       <h1 class="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
       <p class="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
     </div>
-    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+    <div class="lg:w-3/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
 
                  <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
@@ -112,7 +112,8 @@ include "admin/db.php";
                       <label for="useremail" class="form-label">User Location</label>
                       
                         <select class="form-control" name="location" id="location"  >
-                         <option value="location" selected="selected">Please select user type</option>
+                         <option value="location" selected="selected" id="city">Select Location</option>
+                         <option value="location" id="city"><?php $cityData?></option>
                       </select>
                       </div>  
                       </div>
@@ -155,10 +156,17 @@ include "admin/db.php";
 
 
         <!-- Footer Starts Here -->
-<?php include 'components/footer.php'?>
+<?php include 'components/footer.php';
+
+// location PHP script
+
+
+?>
+
 
 
 <script>
+    
 		// Show seller fields if seller is selected in user type dropdown
 		document.getElementById("user_type").addEventListener("change", function() {
 			if (this.value == "seller") {
@@ -172,6 +180,9 @@ include "admin/db.php";
 				document.getElementById("admin_fields").style.display = "block";
 			}
 		});
+
+    // Location Script
+
 	</script>
 
 
@@ -196,7 +207,7 @@ function clearField(t) { //declaring the array outside of the
 }
 </script>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
 </body>
 
