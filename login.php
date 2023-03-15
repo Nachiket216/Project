@@ -65,6 +65,16 @@ include "admin/db.php"
       </div>
     </div>
 
+    <div class="col-12" >
+                      <label for="user_type" class="form-label">User Type</label>
+                        <select class="form-control" name="user_type" id="user_type">
+                          <option value="" selected="selected">Select Property</option>
+                          <option value="admin" >Admin</option>
+                          <option value="user" >User</option>
+                          <option value="seller" >Seller</option>
+                        </select>
+                    </div>
+
     <div class="col-12">
       <label for="password" class="form-label">Password</label>
       <input type="password" name="password" class="form-control" id="password" required>
