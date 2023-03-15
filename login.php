@@ -1,6 +1,5 @@
 <?php
 include "admin/db.php"
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +54,7 @@ include "admin/db.php"
     <p class="text-center small">Enter your username & password to login</p>
   </div>
 
-  <form class="row g-3 needs-validation" action="login.php" method="POST" >
+  <form class="row g-3 needs-validation" action="admin/login.php" method="POST" >
 
     <div class="col-12">
       <label for="username" class="form-label">Username</label>
@@ -68,7 +67,7 @@ include "admin/db.php"
 
     <div class="col-12">
       <label for="password" class="form-label">Password</label>
-      <input type="password" name="password" class="form-control" id="yourPassword" required>
+      <input type="password" name="password" class="form-control" id="password" required>
       <div class="invalid-feedback">Please enter your password!</div>
     </div>
 
@@ -117,12 +116,10 @@ function clearField(t) { //declaring the array outside of the
 </script>
 
 <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-
-
 </body>
-
 </html>
-<?php 
+
+<!-- <?php 
  
 
  if(isset($_POST['login']))
@@ -135,14 +132,20 @@ function clearField(t) { //declaring the array outside of the
 
   $sql="SELECT * FROM user WHERE user_name='$user_name' AND c_password='$user_pass'";
   $result=mysqli_query($con,$sql);
-  if(mysqli_num_rows($result)>0)
-  {
-    echo "<script>window.open('login.php?logged='Logged in successfully .. !','_self')</script>";
-    //header('location:home.php');
-  }
-  else
-  {
-    echo "<script> alert('Password or username is incorrect!')</script>";
-  }
+  // if(mysqli_num_rows($result)>0)
+  // {
+  //   echo "<script>window.open('login.php?logged='Logged in successfully .. !','_self')</script>";
+
+  //   //header('location:home.php');
+  // }
+  // else
+  // {
+  //   echo "<script> alert('Password or username is incorrect!')</script>";
+  // }
+
+
+mysqli_close($con);
+
  }
- ?>
+ ?> -->
+

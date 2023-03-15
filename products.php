@@ -2,7 +2,7 @@
 
   <body>
   <?php include 'components/navbar.php';?>
-  
+
     <!-- Page Content -->
     <div class="page-heading header-text">
       <div class="container">

@@ -106,7 +106,7 @@ include "admin/db.php";
                     </div>
                     
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" >submit</button>
+                      <button class="btn btn-primary w-100" type="submit" >Submit</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Already have an account? <a href="login.php">Log in</a></p>
@@ -232,7 +232,7 @@ function clearField(t) { //declaring the array outside of the
                                       }
                                       else (option=="Hospital" || option== "Hall" || option=="Bank" ||
                                     option=="Restaurant" || option== "Bar" || option=="Resort" ||
-                                    option=="Coaching class" || option== "Café" ){
+                                    option=="Coaching class" || option== "Café" );{
                                       
                                           for (var i = 0; i < 2; i++)
                                           {

@@ -1,22 +1,16 @@
 <?php
 
+$sev="localhost";
+$user="root";
+$pwd="";
+$dbname="easymart";
 
-
-class connect
+$con=mysqli_connect($sev,$user,$pwd,$dbname);
+if(!$con)
 {
-	public $servername='localhost';
-	private $username='root';
-	private $password='';
-	private $dbname='easymart';
-
-	public function dbconnect()
-	{
-		$db=mysqli_connect($this->servername,$this->username,$this->password,$this->dbname);
-		
-		return $db;
-	}
+	die("connection failed".mysqli_connect_error());
 }
-
+//echo "connected successfully"; 
 
 
 ?>
