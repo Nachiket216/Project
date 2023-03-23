@@ -1,5 +1,5 @@
 <?php
-include "admin/db.php";
+// include "admin/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,16 +54,16 @@ include "admin/db.php";
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-            <form class="row g-3 needs-validation" novalidate action="admin/user.php" method="POST">
+            <form class="row g-3 needs-validation" action="functions/authcode.php" method="POST">
                     <div class="col-12">
-                      <label for="username" class="form-label">Your Name</label>
-                      <input type="text" name="username" class="form-control" id="username" required>
+                      <label for="name" class="form-label">Your Name</label>
+                      <input type="text" name="name" class="form-control" id="name" required>
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="useremail" class="form-label">Your Email</label>
-                      <input type="email" name="useremail" class="form-control" id="useremail" required>
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" name="email" class="form-control" id="email" required>
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 
@@ -87,7 +87,7 @@ include "admin/db.php";
                       </div>
 
                       <div class="col-12">
-                        <label for="seller_name" class="form-label">Shop Name</label>
+                        <label for="seller_name" class="form-label">Seller Name</label>
                         <input type="text" name="seller_name" class="form-control" id="seller_name" required>
                         <div class="invalid-feedback">Please, enter your name!</div>
                       </div>
@@ -109,19 +109,26 @@ include "admin/db.php";
                 		<div id="admin_fields" style="display:block; width:100%;" >
 
                       <div class="col-12" >
-                      <label for="useremail" class="form-label">User Location</label>
+                      <label for="location" class="form-label">Location</label>
                       
                         <select class="form-control" name="location" id="location"  >
                          <option value="location" selected="selected" id="city">Select Location</option>
-                         <option value="location" id="city"><?php $cityData?></option>
+                         <option value="location" selected="selected" id="city">Akola</option>
+                         <option value="location" selected="selected" id="city">Amravati</option>
+                         <option value="location" selected="selected" id="city">Chandrapur</option>
+                         <option value="location" selected="selected" id="city">Mumbai</option>
+                         <option value="location" selected="selected" id="city">Nagpur</option>
+                         <option value="location" selected="selected" id="city">Nashik</option>
+                         <option value="location" selected="selected" id="city">Pune</option>
+                         <option value="location" selected="selected" id="city">Wardha</option>
                       </select>
                       </div>  
                       </div>
                     
 
                     <div class="col-12">
-                      <label for="userpassword" class="form-label">Password</label>
-                      <input type="password" name="userpassword" class="form-control" id="userpassword" required>
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" id="userpassword" required>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
                     
@@ -141,7 +148,7 @@ include "admin/db.php";
                     </div>
                     
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" >Submit</button>
+                      <button class="btn btn-primary w-100" type="submit" name="register_btn" >Submit</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Already have an account? <a href="login.php">Log in</a></p>
