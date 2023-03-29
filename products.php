@@ -31,11 +31,25 @@
 
                   <div class="col-lg-4 col-md-12 col-sm-12">
                       <!-- <label for="user_type" class="form-label">User Type</label> -->
-                        <select class="form-control" name="user_type" id="user_type">
-                          <option value="" selected="selected">Select Location</option>
-                          <option value="Nagpur" >Nagpur</option>
-                          <option value="Mumbai" >Mumbai</option>
-                          <option value="Pune" >Pune</option>
+                        <select class="form-control" name="user_type" id="cities">
+                          <option value="" selected="selected">Select City</option>
+                          <!-- <option value="nagpur" >Nagpur</option>
+                          <option value="mumbai" >Mumbai</option>
+                          <option value="pune" >Pune</option>
+                          <option value="">Select a city</option>
+                          <option value="new-york">New York</option>
+                          <option value="los-angeles">Los Angeles</option>
+                          <option value="chicago">Chicago</option> -->
+                        </select>
+
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                      <!-- <label for="user_type" class="form-label">User Type</label> -->
+                        <select class="form-control" name="user_type" id="areas" disabled>
+                          <option value="" id="area" selected="selected">Select Area</option>
+                          <!-- <option value="nagpur" >Nagpur</option>
+                          <option value="mumbai" >Mumbai</option>
+                          <option value="pune" >Pune</option> -->
                         </select>
 
                   </div>
@@ -49,16 +63,7 @@
                         </select>
 
                   </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                      <!-- <label for="user_type" class="form-label">User Type</label> -->
-                        <select class="form-control" name="user_type" id="user_type">
-                          <option value="" selected="selected">Select Product</option>
-                          <option value="" >Nagpur</option>
-                          <option value="" >Mumbai</option>
-                          <option value="" >Pune</option>
-                        </select>
 
-                  </div>
 
                   <div class="col-lg-12">
                     <fieldset>
@@ -224,6 +229,56 @@
     <!-- Footer Starts Here -->
     <?php include 'components/footer.php'?>
 
+  <script>
+    // Define the array of cities and areas
+const citiesAndAreas = [
+  {
+    city: 'Nagpur',
+    areas: ['Ram Nagar', 'Civil Lines', 'Zinga Bai Takli','Jaripatka']
+  },
+  {
+    city: 'Mumbai',
+    areas: ['Dadar', 'Dharavi', 'Bandra']
+  },
+  {
+    city: 'Amravati',
+    areas: ['Downtown', 'Lakeview', 'Lincoln Park']
+  }
+];
+
+// Get references to the select boxes
+const citiesSelect = document.getElementById('cities');
+const areasSelect = document.getElementById('areas');
+
+// Populate the cities select box
+citiesAndAreas.forEach(cityAndArea => {
+  const option = document.createElement('option');
+  option.text = cityAndArea.city;
+  option.value = cityAndArea.city;
+  citiesSelect.add(option);
+});
+
+// Handle the change event for the cities select box
+citiesSelect.addEventListener('change', e => {
+  const selectedCity = e.target.value;
+  
+  // Filter the areas based on the selected city
+  const selectedCityAreas = citiesAndAreas.find(cityAndArea => cityAndArea.city === selectedCity).areas;
+  
+  // Clear the previous options and add the new options to the areas select box
+  areasSelect.innerHTML = '';
+  selectedCityAreas.forEach(area => {
+    const option = document.createElement('option');
+    option.text = area;
+    option.value = area;
+    areasSelect.add(option);
+  });
+  
+  // Enable the areas select box
+  areasSelect.disabled = false;
+});
+
+  </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
