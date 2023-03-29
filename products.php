@@ -234,11 +234,11 @@
 const citiesAndAreas = [
   {
     city: 'Nagpur',
-    areas: ['Ram Nagar', 'Civil Lines', 'Zinga Bai Takli','Jaripatka']
+    areas: ['Ram Nagar', 'Civil Lines', 'Zinga Bai Takli','Jaripatka','Hudkeshwar','Hingna','Koradi','Sadar','Dighori','Bajaj Nagar','Deekshabhoomi','Mahal','Itwari','Dhantoli','Nandanvan','Binaki']
   },
   {
     city: 'Mumbai',
-    areas: ['Dadar', 'Dharavi', 'Bandra']
+    areas: ['Dadar', 'Dharavi', 'Bandra','Andheri','Dadar','Thane','Dombivali','Bhivandi','Kalyan']
   },
   {
     city: 'Amravati',
